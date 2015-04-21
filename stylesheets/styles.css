@@ -1,7 +1,7 @@
 html, body {
 	font-family: 'Open Sans', sans-serif;
 	height: 100%;
-	background-image: url("./images/bg.png")
+	background-image: url("../images/bg.png")
 }
 
 hr {
@@ -28,4 +28,5 @@ div.item {
     display: inline-block;
     /* To horizontally center images and caption */
     text-align: center;
+	width: 320px;
 }

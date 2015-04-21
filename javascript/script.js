@@ -8,7 +8,7 @@ function load(params) {
 		//LowerCase() so if the user puts in a link LiKE ThIS then the system will be able to handle it.
 			if (item.data.url.toLowerCase().indexOf("http://i.imgur.com/") >= 0){
 				if (item.data.url.toLowerCase().indexOf(".gifv") < 0){
-					$('#images').append('<div class="item"><img src='+item.data.url+'></img></div>');
+					$('#images').append('<div class="item"><img src='+item.data.url+'></img><span class="caption">'+item.data.title+'</span></div>');
 				}
 			}
         });
