@@ -1,0 +1,15 @@
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	background-image: url("./images/bg.png")
+}
+
+hr {
+	background-color: grey; height: 2px; border: 0;
+}
+
+img {
+    display: block;
+    max-width: 400px;
+    height:auto;
+}
