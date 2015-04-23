@@ -1,7 +1,8 @@
 html, body {
 	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
 	height: 100%;
-	background-image: url("../images/bg.png")
+	background-image: url("../images/bg.png");
 }
 
 hr {
