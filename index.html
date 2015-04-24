@@ -9,15 +9,24 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel = "stylesheet" type = "text/css" href = "stylesheets/styles.css">
+	<link rel = "stylesheet" type = "text/css" href = "stylesheets/bootstrap_wider_text.css">
 	<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 	<head>
 		<body>
 
-	<div class="input-group">
-	  <span class="input-group-addon" id="basic-addon1">@</span>
-	</div>
-
-		<div id = "images"></div>
+		<div class="container">
+		<div class="row">
+				<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">/r/</span>
+					<input type="text" class="form-control" placeholder="examples: pics, aww, Art" id = "textbox" onkeypress="return wasEnter(event)"/>
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" onClick = "search()">Go!</button>
+					</span>
+				</div>
+			</div>
+		</div>
+		</div>
+		<center><div id = "images"></div></center>
 		<script src = "javascript/script.js"></script>
 		</body>
 </html>
