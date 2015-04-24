@@ -2,6 +2,7 @@ var lastId;
 
 function load(params) {
     params = params || {};
+    //If this gets called and textbox.value is empty, declare a var and set it equal to textbox.value:
 	if(textbox.value == ""){
 		var subreddit = "all";
 	}else{
@@ -12,7 +13,7 @@ function load(params) {
         $.each(children, function (i, item) {
 		//LowerCase() so if the user puts in a link LiKE ThIS then the system will be able to handle it.
 			if (item.data.url.toLowerCase().indexOf(".jpeg") >= 0 || item.data.url.toLowerCase().indexOf(".jpg") >= 0 || item.data.url.toLowerCase().indexOf(".png") >= 0 && item.data.url.toLowerCase().indexOf(".gifv") < 0){
-				$('#images').append('<div class="item"><img src='+item.data.url+'></img><span class="caption">'+item.data.title+'</span></div>');
+				$('#images').append('<div class="item"><img src='+item.data.url+'></img><span class="caption">'+item.data.title+'<br>Score: '+item.data.score+'</span></div>');
 			}
         });
         if (children && children.length > 0) {
@@ -38,6 +39,8 @@ $(window).scroll(function () {
 //This is the function that loads all the images into #images:
 load();
 
+//This function just removes everything in the div
+//This pretty much will remove the images.
 function cleanImages(){
 	$("#images").html("");
 }
