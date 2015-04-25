@@ -13,7 +13,6 @@ function load(params) {
         $.each(children, function (i, item) {
 		//LowerCase() so if the user puts in a link LiKE ThIS then the system will be able to handle it.
 			if (item.data.url.toLowerCase().indexOf(".jpeg") >= 0 || item.data.url.toLowerCase().indexOf(".jpg") >= 0 || item.data.url.toLowerCase().indexOf(".png") >= 0 && item.data.url.toLowerCase().indexOf(".gifv") < 0){
-				$('#images').append('<div class="item"><img src='+item.data.url+'></img><span class="caption">'+item.data.title+'<br>Score: '+item.data.score+'</span></div>');
 			}
         });
         if (children && children.length > 0) {
