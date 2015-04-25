@@ -51,6 +51,7 @@ load();
 //This function just removes everything in the div
 //This pretty much will remove the images.
 function cleanImages(){
+	urls = [];
 	$("#images").html("");
 }
 
