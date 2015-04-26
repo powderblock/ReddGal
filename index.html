@@ -6,16 +6,16 @@
 	<meta name="author" content="Blade Nelson">
 	<title>ReddGal</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 	<!-- Latest compiled and minified CSS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel = "stylesheet" type = "text/css" href = "stylesheets/styles.css">
 	<link rel = "stylesheet" type = "text/css" href = "stylesheets/bootstrap_wider_text.css">
-	<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 	<link rel="icon" type="image/png" href="http://i.imgur.com/uKlt8rr.png" sizes="192x192">
 	<link rel="icon" type="image/png" href="http://i.imgur.com/HajKOO3.png" sizes="96x96">
 	<link rel="icon" type="image/png" href="http://i.imgur.com/O6fHJCC.png" sizes="32x32">
@@ -43,9 +43,20 @@
 						<span class="input-group-btn">
 							<button class="btn btn-default" type="button" onClick = "search()">Go!</button>
 						</span>
+						  </div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div id = "settings">
+				<select id="thedropdown">
+				  <option value="hot">hot</option>
+				  <option value="rising">rising</option>
+				  <option value="new">new</option>
+				  <option value="controversial">controversial</option>
+				  <option value="top">top</option>
+				</select>
+			<div>
 		<div id = "images"></div>
 		<script src = "javascript/script.js"></script>
 		</body>

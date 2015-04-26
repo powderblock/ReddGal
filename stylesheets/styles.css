@@ -20,6 +20,7 @@ img {
 
 #images {
 	text-align: center;
+	padding-top: 25px;
 }
 
 .caption {
@@ -42,6 +43,10 @@ div.item {
 	font-size: 14px;
 	text-align: center;
 	padding-bottom: 20px;
+}
+
+#settings {
+	text-align: center;
 }
 
 h1 {
