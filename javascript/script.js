@@ -9,9 +9,12 @@ function load(params) {
 	}else{
 		var subreddit = textbox.value;
 	}
+	//Where subreddit is the subreddit the user types
+	//subFilter is the current filter (hot, new, etc)
     $.getJSON("http://www.reddit.com/r/"+subreddit+"/"+$("#subFilter").val()+".json?limit=75", params, function (data) {
         var children = data.data.children;
         $.each(children, function (i, item) {
+			//If the current url is not in the urls array
 			if($.inArray(item.data.url, urls) == -1){
 				urls.push(item.data.url);
 				//LowerCase() so if the user puts in a link LiKE ThIS then the system will be able to handle it.
@@ -20,9 +23,11 @@ function load(params) {
 				urlLower.indexOf(".jpg") >= 0 ||
 				urlLower.indexOf(".png") >= 0 &&
 				urlLower.indexOf(".gifv") < 0){
+					//If the NSFW box is checked, allow all the images!
 					if($('#nsfw').is(":checked")){
 						$('#images').append('<div class="item"><a href='+item.data.url+' target="_blank"><img src='+item.data.url+'></img></a><span class="caption">'+item.data.title+'<br><a href ="http://reddit.com'+item.data.permalink+'"target="_blank">View comments on reddit</a><br>Score: '+item.data.score+'</span></div>');
 					}
+					//If the NSFW box is not checked, only show items that aren't over_18 posts
 					if(!$('#nsfw').is(":checked")){
 						if(!item.data.over_18){
 							$('#images').append('<div class="item"><a href='+item.data.url+' target="_blank"><img src='+item.data.url+'></img></a><span class="caption">'+item.data.title+'<br><a href ="http://reddit.com'+item.data.permalink+'"target="_blank">View comments on reddit</a><br>Score: '+item.data.score+'</span></div>');
@@ -66,8 +71,12 @@ function search(){
 	load();
 }
 
+
+//Check if key pressed
 function wasEnter(key) {
+	//Was the enter key the key press?
     if (key.keyCode == 13) {
+		//If so, call these functions
 		cleanImages();
 		load();
         return false;
