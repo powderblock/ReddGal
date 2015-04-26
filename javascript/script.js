@@ -20,7 +20,14 @@ function load(params) {
 				urlLower.indexOf(".jpg") >= 0 ||
 				urlLower.indexOf(".png") >= 0 &&
 				urlLower.indexOf(".gifv") < 0){
-					$('#images').append('<div class="item"><a href='+item.data.url+' target="_blank"><img src='+item.data.url+'></img></a><span class="caption">'+item.data.title+'<br><a href ="http://reddit.com'+item.data.permalink+'"target="_blank">View comments on reddit</a><br>Score: '+item.data.score+'</span></div>');
+					if($('#nsfw').is(":checked")){
+						$('#images').append('<div class="item"><a href='+item.data.url+' target="_blank"><img src='+item.data.url+'></img></a><span class="caption">'+item.data.title+'<br><a href ="http://reddit.com'+item.data.permalink+'"target="_blank">View comments on reddit</a><br>Score: '+item.data.score+'</span></div>');
+					}
+					if(!$('#nsfw').is(":checked")){
+						if(!item.data.over_18){
+							$('#images').append('<div class="item"><a href='+item.data.url+' target="_blank"><img src='+item.data.url+'></img></a><span class="caption">'+item.data.title+'<br><a href ="http://reddit.com'+item.data.permalink+'"target="_blank">View comments on reddit</a><br>Score: '+item.data.score+'</span></div>');
+						}
+					}
 				}
 			}
         });
