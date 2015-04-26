@@ -18,6 +18,10 @@ img {
 	padding-right: 10px;
 }
 
+#images {
+	text-align: center;
+}
+
 .caption {
     /* Make the caption a block so it occupies its own line. */
     display: block;
@@ -32,4 +36,14 @@ div.item {
     /* To horizontally center images and caption */
     text-align: center;
 	width: 320px;
+}
+
+#footer {
+	font-size: 14px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+h1 {
+	text-align: center;
 }
