@@ -37,25 +37,24 @@
 		</center>
 		<div class="container">
 			<div class="row">
-					<div class="input-group input-group-lg">
+				<div class="input-group input-group-lg">
 					<span class="input-group-addon" id="basic-addon1">/r/</span>
-						<input type="text" class="form-control" placeholder="examples: pics, aww, Art" id = "textbox" onkeypress="return wasEnter(event)"/>
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" onClick = "search()">Go!</button>
-						</span>
-						  </div>
-						</div>
-					</div>
+					<input type="text" class="form-control" placeholder="examples: pics, aww, Art" id = "textbox" onkeypress="return wasEnter(event)"/>
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" onClick = "search()">Go!</button>
+					</span>
 				</div>
 			</div>
+		</div>
 			<div id = "settings">
-				<select id="thedropdown">
+				<select id="subFilter" onchange="search()">
 				  <option value="hot">hot</option>
 				  <option value="rising">rising</option>
 				  <option value="new">new</option>
 				  <option value="controversial">controversial</option>
 				  <option value="top">top</option>
 				</select>
+				<input type="checkbox" id="nsfw" checked>Show NSFW Content</input>
 			<div>
 		<div id = "images"></div>
 		<script src = "javascript/script.js"></script>

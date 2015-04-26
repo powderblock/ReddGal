@@ -1,7 +1,6 @@
 var lastId;
 var urls = [];
 
-
 function load(params) {
     params = params || {};
     //If this gets called and textbox.value is empty, declare a var and set it equal to textbox.value:
@@ -10,7 +9,7 @@ function load(params) {
 	}else{
 		var subreddit = textbox.value;
 	}
-    $.getJSON("http://www.reddit.com/r/"+subreddit+"/.json?limit=75", params, function (data) {
+    $.getJSON("http://www.reddit.com/r/"+subreddit+"/"+$("#subFilter").val()+".json?limit=75", params, function (data) {
         var children = data.data.children;
         $.each(children, function (i, item) {
 			if($.inArray(item.data.url, urls) == -1){
