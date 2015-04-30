@@ -54,11 +54,6 @@ h1 {
 }
 
 input[type=checkbox] {
-	/* All browsers except webkit*/
-	transform: scale(2);
-
-	/* Webkit browsers*/
-	-webkit-transform: scale(2);
 	margin: 10px;
 	padding-left: 20px;
 }
